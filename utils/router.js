@@ -1,8 +1,8 @@
 //Importamos todas las páginas
-import Home from "../pages/Home/Home";
-import Gallery from "../pages/Gallery/Gallery";
-import Contact from "../pages/Contact/Contact";
-import NotFound from "../pages/NotFound/NotFound";
+import Home from "../pages/Home/Home.js";
+import Products from "../pages/Products/Products.js";
+import Contact from "../pages/Contact/Contact.js";
+import CardProducts from "../pages/CardProducts/CardProducts.js";
 
 //Vamos a crear un array de objetos para poder gestionar y acceder a cada una de las rutas
 const routes = [
@@ -11,8 +11,8 @@ const routes = [
     page: Home,
   },
   {
-    path: "/gallery",
-    page: Gallery,
+    path: "/products",
+    page: Products,
   },
   {
     path: "/contact",
@@ -32,6 +32,6 @@ export const router = () => {
   if (route.page) {
     route.page();
   } else {
-    NotFound();
+    CardProducts();
   }
 };
